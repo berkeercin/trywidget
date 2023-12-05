@@ -6,12 +6,20 @@ class TryDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Ana ekran"),
-      ),
-      drawer: drawer(context),
-      endDrawer: drawer(context),
-    );
+        appBar: AppBar(
+          title: const Text("Ana ekran"),
+        ),
+        drawer: drawer(context),
+        endDrawer: drawer(context),
+        body: Center(
+          child: ElevatedButton(
+            onPressed: () {
+              // Navigator.pop(context) ile ana sayfaya dönülebilir.
+              Navigator.pop(context);
+            },
+            child: const Text("Ana sayfaya dön"),
+          ),
+        ));
   }
 }
 
